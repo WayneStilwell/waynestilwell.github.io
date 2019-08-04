@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
-
+<style>
+  .static-link { color: #333030 }
+</style>
 <aside class="sidebar">
   <header>
     <div class="about">
@@ -10,7 +12,8 @@ layout: default
       </div>
       <div class="author-name">{{site.author}}</div>
       <p>{{site.about-author}}</p>
-      <p><a href="{{site.baseUrl}}/about">About Me</a></p>
+      <p><a href="{{site.baseUrl}}/about" class="static-link">About Me</a></p>
+      <p><a href="{{site.baseUrl}}/projects" class="static-link">Projects</a></p>
     </div>
   </header> <!-- End Header -->
   <footer>
