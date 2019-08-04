@@ -2,7 +2,8 @@
 layout: default
 ---
 <style>
-  .static-link { color: #333030 }
+  .static-link { color: #333030; }
+  .static-link__wrapper { margin-top: 2em; }
 </style>
 <aside class="sidebar">
   <header>
@@ -12,8 +13,8 @@ layout: default
       </div>
       <div class="author-name">{{site.author}}</div>
       <p>{{site.about-author}}</p>
-      <p><a href="{{site.baseUrl}}/about" class="static-link">About Me</a></p>
-      <p><a href="{{site.baseUrl}}/projects" class="static-link">Projects</a></p>
+      <p class="static-link__wrapper"><a href="{{site.baseUrl}}/about" class="static-link">About Me</a></p>
+      <p class="static-link__wrapper"><a href="{{site.baseUrl}}/projects" class="static-link">Projects</a></p>
     </div>
   </header> <!-- End Header -->
   <footer>
