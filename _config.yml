@@ -9,7 +9,7 @@ site-twitter: waynestilwell #if your site has a twitter account, enter it here
 # Author Settings
 author: Wayne Stilwell # add your name
 author-img: me.png # add your photo
-about-author: Long-time PHP developer. Learning modern JavaScript. Being forced to learn .NET # add description
+about-author: Long-time PHP developer. Learning modern JavaScript and .NET. # add description
 social-twitter: waynestilwell # add your Twitter handle
 social-facebook: # add your Facebook handle
 social-github: waynestilwell # add your Github handle
