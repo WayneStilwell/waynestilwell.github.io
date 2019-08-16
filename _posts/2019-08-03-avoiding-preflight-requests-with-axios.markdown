@@ -7,7 +7,6 @@ img: # Add image post (optional)
 tags: [CORS,axios,Firebase]
 ---
 
-## Background
 Sometimes our AJAX requests can trigger a [CORS preflight](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Preflighted_requests). An HTTP request is sent first, with the OPTIONS method, to verify that the actual request we want to make is safe. 
 
 Not all requests trigger a preflight check. These are known as ["simple requests"](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Simple_requests).
