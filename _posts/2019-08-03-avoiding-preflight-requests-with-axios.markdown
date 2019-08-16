@@ -56,14 +56,16 @@ exports.createUser = functions.https.onRequest((request, response) => {
       anotherField: postBody.anotherField
     }
 
-    axios.post(endPoint, qs.stringify(requestBody), headers).then((ssoResponse) => {
-      return cors(request, response, () => {
-        response.status(200).send(ssoResponse.data);
+    axios.post(endPoint, qs.stringify(requestBody), headers)
+      .then((ssoResponse) => {
+        return cors(request, response, () => {
+          response.status(200).send(ssoResponse.data);
+        }
       })
-    }).catch((error) => {
-      return cors(request, response, () => {
-        response.status(400).send(`Failed to call SSO API to create user: ${error}`);
+      .catch((error) => {
+        return cors(request, response, () => {
+          response.status(400).send(`Failed to call SSO API to create user: ${error}`);
+        })
       })
-    })
 })
 ```
