@@ -3,7 +3,7 @@ layout: post
 title: "Installing Babel CLI on macOS Mojave"
 date: 2019-08-05 13:45:20 -0600
 description: How to install the Babel CLI on macOS.
-img: # Add image post (optional)
+img: babel.png # Add image post (optional)
 tags: [babel,macOS]
 ---
 
