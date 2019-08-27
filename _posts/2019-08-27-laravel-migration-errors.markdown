@@ -37,7 +37,7 @@ This adds a new email column of type `VARCHAR(255)`, and creates a unique index 
 
 The problem is that Laravel uses the __utf8mb4__ character set (to store emojis). This uses up to 4 bytes per character. A string with 255 characters using 4 bytes per character gives you 1,020 bytes. Since 1,020 > 767, this is why I'm getting the "key too long" error.
 
-It sounds like what I really want to do is change the default length of `string()` in Laravel. Turns out I can!
+It sounds like what I really want to do is change the default length of `$table->string()` in Laravel. Turns out I can! Using 4 bytes per character, __191__ characters is the max length I can use to stay under 767 bytes.
 
 __app/Providers/AppServiceProvider.php:__
 ```php
@@ -48,6 +48,8 @@ public function boot()
     Schema::defaultStringLength(191);
 }
 ```
+
+The string method does accept the length you want as an optional second parameter. So I could say `$table->string('email', 191);`. But I don't want to manually do that every time I create a VARCHAR field.
 
 I added this and re-ran the migration. But I now got a new error...
 
