@@ -59,7 +59,7 @@ I added this and re-ran the migration. But I now got a new error...
 
 Two of the tables we created were __questions__ and __replies__. The code that the instructor gave to generate these are below.
 
-__questions__ Table Migration:
+__questions Table Migration:__
 ```php
 public function up()
 {
@@ -75,7 +75,7 @@ public function up()
 }
 ```
 
-__replies__ Table Migration:
+__replies Table Migration:__
 ```php
 public function up()
 {
@@ -90,7 +90,7 @@ public function up()
 }
 ```
 
-I would not have encountered this SQL error if I had copied his code verbatim. However, he had us generate the migration files using `php artisan make:model XYZ -mfr'. This auto-generated the `id` and timestamp fields for us.
+I would not have encountered this SQL error if I had copied his code verbatim. However, he had us generate the migration files using `php artisan make:model XYZ -mfr`. This auto-generated the `id` and timestamp fields for us.
 
 Notice in the instructor's code above how the `id` fields are created using the `increments()` method?
 
@@ -99,7 +99,7 @@ It turns out that in Laravel 5.8, they changed the default for auto-incremented 
 ## Solution
 Everywhere I reference an ID in a foreign table, I replaced `integer` with `bigInteger`. So my migrations for those two tables looked like this.
 
-__questions__ Table Migration:
+__questions Table Migration:__
 ```php
 public function up()
 {
@@ -115,7 +115,7 @@ public function up()
 }
 ```
 
-__replies__ Table Migration:
+__replies Table Migration:__
 ```php
 public function up()
 {
